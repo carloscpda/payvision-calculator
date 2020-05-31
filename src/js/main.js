@@ -45,6 +45,7 @@ const handleEqualsClick = function () {
 
   // Perform operation
   resultNum = operate(operator, oldNum, theNum);
+  let formattedResult = "";
 
   // Clean operator
   operator = "";
@@ -60,11 +61,11 @@ const handleEqualsClick = function () {
       // If result is infinity, set off by dividing by zero
     }
   } else {
-    resultNum = formatNumber(resultNum);
+    formattedResult = formatNumber(resultNum);
   }
 
   // Display result, finally!
-  result.innerHTML = resultNum;
+  result.innerHTML = formattedResult || resultNum;
   result.setAttribute("data-result", resultNum);
 
   // Now reset oldNum & keep result
