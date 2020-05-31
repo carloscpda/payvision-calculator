@@ -1,0 +1,70 @@
+@import "reset.css";
+@import "theme.css";
+
+body {
+  background-color: var(--secondary-color);
+  font: 300 28px/1.6 "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 5em 0 2em;
+  text-align: center;
+  color: var(--ink-color);
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 10em;
+  margin: 0 auto;
+  grid-gap: 1rem;
+}
+
+.calculator__clear,
+.calculator__num,
+.calculator__ops,
+.calculator__viewer {
+  transition: all 0.25s;
+  color: var(--ink-color);
+}
+
+.calculator__viewer {
+  grid-column: 2 / 5;
+  float: left;
+  line-height: 3em;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 7.5em;
+  height: 3em;
+}
+
+.calculator--broken {
+  transform: translate3d(0, -2000px, 0);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.calculator__clear,
+.calculator__num,
+.calculator__ops {
+  background: var(--primary-color);
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  height: 2em;
+}
+
+.calculator__clear {
+  margin: auto 0;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding-top: 2em;
+  }
+}
