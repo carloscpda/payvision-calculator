@@ -1,0 +1,6 @@
+{
+    "fixturesFolder": "src/test/e2e/fixtures",
+    "integrationFolder": "src/test/e2e/integration",
+    "pluginsFile": "src/test/e2e/plugins/index.js",
+    "supportFile": "src/test/e2e/support/index.js"
+}
