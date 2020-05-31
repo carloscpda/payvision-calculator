@@ -24,26 +24,26 @@ By the other hand, UX fixes will be reported on the section 5.
 
 In summary:
 
-❌ Bad project structure. There is only one file mixing all the functionalities, styles and html. Mix style, js and html on the same file is a good approach for a small components (Vue.js) but not for a whole application.
-❌ Bugs with operators and numbers misplaced.
-❌ "id" property must be unique for html elements.
-❌ Operator not restored after any operation.
-❌ Not using a style naming convencion like BEM.
-❌ Using 'for' loops to iterate over an array. It is highly recommended to use functional programming methods (map, forEach, filter, ...).
-❌ Not ready for mobile version.
-❌ There's not html, head and body tags and metadata neither.
-❌ It using h2 for the web app title. It is recommended to use h1 in this case.
-❌ Not restoring default browser css. The final result will be different on every browser.
-❌ Not using variables for app colors.
-❌ Very bad position of keys, not using a clear order.
-❌ There's not hover and ative pseudo-class on buttons.
-❌ Not using a good character for represent sum and minus operators. They are no place in the middle on the button.
-❌ Key C was the standard in phisical calculators for clear the result. But nowdays, there are better approachs.
-❌ Not good animation for broken (NaN) and infinite results.
-❌ Hard to read long numbers on result area.
-✅ Handle infinite and NaN
-✅ Extract "el" function to get html element
-✅ Use of relative sizes (em) insteand of pixels
+- ❌ Bad project structure. There is only one file mixing all the functionalities, styles and html. Mix style, js and html on the same file is a good approach for a small components (Vue.js) but not for a whole application.
+- ❌ Bugs with operators and numbers misplaced.
+- ❌ "id" property must be unique for html elements.
+- ❌ Operator not restored after any operation.
+- ❌ Not using a style naming convencion like BEM.
+- ❌ Using 'for' loops to iterate over an array. It is highly recommended to use functional programming methods (map, forEach, filter, ...).
+- ❌ Not ready for mobile version.
+- ❌ There's not html, head and body tags and metadata neither.
+- ❌ It using h2 for the web app title. It is recommended to use h1 in this case.
+- ❌ Not restoring default browser css. The final result will be different on every browser.
+- ❌ Not using variables for app colors.
+- ❌ Very bad position of keys, not using a clear order.
+- ❌ There's not hover and ative pseudo-class on buttons.
+- ❌ Not using a good character for represent sum and minus operators. They are no place in the middle on the button.
+- ❌ Key C was the standard in phisical calculators for clear the result. But nowdays, there are better approachs.
+- ❌ Not good animation for broken (NaN) and infinite results.
+- ❌ Hard to read long numbers on result area.
+- ✅ Handle infinite and NaN
+- ✅ Extract "el" function to get html element
+- ✅ Use of relative sizes (em) insteand of pixels
 
 ### 2. Testing and bug fixing
 
