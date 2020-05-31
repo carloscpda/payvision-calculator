@@ -69,11 +69,10 @@ Fixes:
 
 ### 3. New features implementation
 
-Our product owner required us new features for this application. We would like the application new version to support multiplications and divisions.
+Current version is 1.2.2. Should we increase the version? How? Why?
 
-- Could you implement these new features?
-- Bear in mind usage of git-flow to track your changes.
-- Current version is 1.2.2 (see package.json version). Should we increase the version? How? Why?
+Yes, we will upgrade the app version to 1.3.0 as [semver](https://semver.org/) recommend.
+It is a MINOR upgrade because we add more funtionalities without make incompatible API changes.
 
 ### 4. Test automation
 
