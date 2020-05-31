@@ -7,3 +7,8 @@ export const el = function (element) {
 
   return document.querySelectorAll(element); // Otherwise, returns a nodelist
 };
+
+// Add a space every 3 figures
+export const formatNumber = function (num) {
+  return num.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, " ");
+};

@@ -21,29 +21,36 @@
   <body>
     <h1>Payvision Calculator</h1>
     <div id="calculator" class="calculator">
-      <button id="clear" class="calculator__clear">C</button>
-
-      <div id="viewer" class="calculator__viewer" data-result="">0</div>
-
-      <button class="calculator__num" data-num="9">9</button>
-      <button class="calculator__num" data-num="8">8</button>
+      <div class="calculator__viewer">
+        <button id="clear" class="calculator__clear">&#215;</button>
+        <div id="result" class="calculator__result" data-result="">0</div>
+      </div>
       <button class="calculator__num" data-num="7">7</button>
-      <button class="calculator__ops" data-ops="plus">+</button>
-
+      <button class="calculator__num" data-num="8">8</button>
+      <button class="calculator__num" data-num="9">9</button>
+      <button class="calculator__ops" data-ops="divide" class="ops">
+        &#8725;
+      </button>
       <button class="calculator__num" data-num="4">4</button>
       <button class="calculator__num" data-num="5">5</button>
       <button class="calculator__num" data-num="6">6</button>
-      <button class="calculator__ops" data-ops="minus">-</button>
-
-      <button class="calculator__num" data-num="3">3</button>
+      <button class="calculator__ops" data-ops="multiply" class="ops">
+        &#215;
+      </button>
       <button class="calculator__num" data-num="1">1</button>
       <button class="calculator__num" data-num="2">2</button>
-
+      <button class="calculator__num" data-num="3">3</button>
+      <button class="calculator__ops" data-ops="minus" class="ops">
+        &#65293;
+      </button>
       <button class="calculator__num" data-num="0">0</button>
-      <button class="calculator__num" data-num=".">.</button>
-      <button class="calculator__ops" data-ops="multiply">x</button>
-      <button class="calculator__ops" data-ops="divide">/</button>
-      <button id="equals" class="calculator__ops">=</button>
+      <button class="calculator__num" data-num=".">&#8901;</button>
+      <button id="equals" class="calculator__ops">
+        &#65309;
+      </button>
+      <button class="calculator__ops" data-ops="plus" class="ops">
+        &#65291;
+      </button>
     </div>
   </body>
   <script type="module" src="./js/main.js"></script>

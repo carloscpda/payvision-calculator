@@ -1,9 +1,9 @@
-import { el } from "./utils.js";
+import { el, formatNumber } from "./utils.js";
 import { operate } from "./operations.js";
 
 // Variables
 const calculator = el("#calculator"), // Calculator
-  viewer = el("#viewer"), // Calculator screen where result is displayed
+  result = el("#result"), // Calculator screen where result is displayed
   equals = el("#equals"), // Equal button
   clear = el("#clear"), // Equal button
   nums = el(".calculator__num"), // List of numbers
@@ -25,7 +25,7 @@ const handleNumberClick = function () {
     theNum += this.getAttribute("data-num");
   }
 
-  viewer.innerHTML = theNum; // Display current number
+  result.innerHTML = formatNumber(theNum); // Display current number
 };
 
 // When: Operator is clicked. Pass number to oldNum and save operator
@@ -34,7 +34,7 @@ const handleOperatorClick = function () {
   theNum = "";
   operator = this.getAttribute("data-ops");
 
-  viewer.setAttribute("data-result", ""); // Reset result in attr
+  result.setAttribute("data-result", ""); // Reset result in attr
 };
 
 // When: Equals is clicked. Calculate result
@@ -53,17 +53,19 @@ const handleEqualsClick = function () {
   if (!isFinite(resultNum)) {
     if (isNaN(resultNum)) {
       // If result is not a number; set off by, eg, double-clicking operators
-      resultNum = "You broke it!";
-    } else {
-      // If result is infinity, set off by dividing by zero
-      resultNum = "Look at what you've done";
+      resultNum = "🤯 🤯 🤯 🤯";
       calculator.classList.add("calculator--broken"); // Break calculator
+    } else {
+      resultNum = "∞";
+      // If result is infinity, set off by dividing by zero
     }
+  } else {
+    resultNum = formatNumber(resultNum);
   }
 
   // Display result, finally!
-  viewer.innerHTML = resultNum;
-  viewer.setAttribute("data-result", resultNum);
+  result.innerHTML = resultNum;
+  result.setAttribute("data-result", resultNum);
 
   // Now reset oldNum & keep result
   oldNum = 0;
@@ -74,8 +76,8 @@ const handleEqualsClick = function () {
 const handleClearClick = function () {
   oldNum = "";
   theNum = "";
-  viewer.innerHTML = "0";
-  viewer.setAttribute("data-result", resultNum);
+  result.innerHTML = "0";
+  result.setAttribute("data-result", resultNum);
 };
 
 /* The click events */

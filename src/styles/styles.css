@@ -2,7 +2,7 @@
 @import "theme.css";
 
 body {
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   font: 300 28px/1.6 "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 5em 0 2em;
@@ -24,7 +24,6 @@ h1 {
   grid-gap: 1rem;
 }
 
-.calculator__clear,
 .calculator__num,
 .calculator__ops,
 .calculator__viewer {
@@ -32,35 +31,74 @@ h1 {
   color: var(--ink-color);
 }
 
+.calculator__num,
 .calculator__viewer {
-  grid-column: 2 / 5;
-  float: left;
-  line-height: 3em;
-  text-align: right;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 7.5em;
+  background: var(--primary-color);
+}
+
+.calculator__ops {
+  background: var(--secondary-dark-color);
+}
+
+.calculator__viewer {
+  grid-column: 1 / 5;
+  display: flex;
+  align-items: center;
   height: 3em;
 }
 
-.calculator--broken {
-  transform: translate3d(0, -2000px, 0);
-  opacity: 0;
-  transition: all 2s ease;
+.calculator--broken .calculator__num,
+.calculator--broken .calculator__ops {
+  transform: rotate(540deg);
+  transition: all 1s;
 }
 
-.calculator__clear,
+.calculator__clear {
+  color: var(--secondary-color);
+  background: none;
+  height: 1.25em;
+  width: 1.25em;
+  border: none;
+  margin: 0 0.5em;
+  transition: all 0.25s;
+}
+
+.calculator__clear:hover {
+  color: var(--danger-color);
+}
+
+.calculator__clear:active {
+  filter: brightness(150%);
+}
+
+.calculator__result {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right;
+  margin: 0 0.5em;
+}
+
 .calculator__num,
 .calculator__ops {
-  background: var(--primary-color);
   border: 0;
   cursor: pointer;
   font: inherit;
   height: 2em;
 }
 
-.calculator__clear {
-  margin: auto 0;
+.calculator__num:hover {
+  background: var(--primary-light-color);
+}
+
+.calculator__ops:hover {
+  background: var(--secondary-color);
+}
+
+.calculator__ops:active,
+.calculator__num:active {
+  filter: brightness(150%);
 }
 
 @media (max-width: 720px) {

@@ -84,11 +84,14 @@ We would like to automate testing of this application.
 
 ### 5. UI/UX design
 
-Do you consider yourself a good designer or UI/UX developer?
-
-- Improve the UI/UX to be more user friendly.
-
-Feel free to do any changes. Show us what you are capable to!
+- New keys layout, with numbers in correct order.
+- Operation buttons have a different color than number buttons.
+- Changed "C" button for a more current clear action.
+- New broken animation for NaN results.
+- View infinite character on infinite result.
+- :hover and :active pseudo-class on buttons.
+- Format number result, splitting every 3 figures with a space character
+- Change "+", "-", "." and "=" for the correspondent [Fullwidth](https://www.compart.com/en/unicode/search?q=fullwidth#characters) version: "＋", "－", "·" and "＝"
 
 ## How to run the application using local server
 

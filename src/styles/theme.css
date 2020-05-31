@@ -1,5 +1,9 @@
 :root {
   --primary-color: rgba(42, 50, 113, 0.28);
-  --secondary-color: #be3c50;
+  --primary-light-color: rgba(42, 50, 113, 0.6);
+  --secondary-color: rgb(240, 128, 128);
+  --secondary-dark-color: rgb(240, 128, 128, 0.6);
+  --background-color: #be3c50;
+  --danger-color: #be3c50;
   --ink-color: rgb(200, 255, 225);
 }
