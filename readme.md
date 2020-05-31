@@ -5,10 +5,10 @@ In this exercise you are given the legacy code of Payvision Calculator web app. 
 ## Your tasks
 
 1. ✅ Code review: please list all good/bad practices you find in this application.
-2. It seems the app is buggy... Could you fix it?
-3. Add divide and multiply operations.
-4. How would do you test this app?
-5. Can you improve the UI/UX?
+2. ✅ It seems the app is buggy... Could you fix it?
+3. ✅ Add divide and multiply operations.
+4. ✅ How would do you test this app?
+5. ✅ Can you improve the UI/UX?
 
 You are allowed to change as much code as you consider.
 
@@ -76,11 +76,21 @@ It is a MINOR upgrade because we add more funtionalities without make incompatib
 
 ### 4. Test automation
 
-We would like to automate testing of this application.
+I've implemented two types of test:
 
-- What kind of tests would you implement? Why?
+**Unit test**
+They are good for test small piece of code. For that reason I have tested utils.js and operate.js files. I have done it with Jest.
 
-**Bonus**: Implement the tests.
+To run these test:
+
+> yarn test
+
+**End to end test**
+They are good for test the entire application (no small pieces of code). I have used it for test all the events can happen on the calculator. I have written using cypress.
+
+To run these test:
+
+> yarn test: e2e
 
 ### 5. UI/UX design
 
