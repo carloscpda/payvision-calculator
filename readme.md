@@ -14,7 +14,7 @@ You are allowed to change as much code as you consider.
 
 **Bonus:**
 
-1. Configure the application to allow use of keyboard numpad.
+1. ✅ Configure the application to allow use of keyboard numpad.
 
 ### 1. Code review
 

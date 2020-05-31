@@ -80,6 +80,49 @@ const handleClearClick = function () {
   result.setAttribute("data-result", resultNum);
 };
 
+// When: A keyboard key is pressed
+const handleKeyDown = function (event) {
+  // List of all available keys
+  const keys = {
+    "1": '[data-num="1"]',
+    "2": '[data-num="2"]',
+    "3": '[data-num="3"]',
+    "4": '[data-num="4"]',
+    "5": '[data-num="5"]',
+    "6": '[data-num="6"]',
+    "7": '[data-num="7"]',
+    "8": '[data-num="8"]',
+    "9": '[data-num="9"]',
+    "0": '[data-num="0"]',
+    ".": '[data-num="."]',
+    "+": '[data-ops="plus"]',
+    "-": '[data-ops="minus"]',
+    x: '[data-ops="multiply"]',
+    "*": '[data-ops="multiply"]',
+    "/": '[data-ops="divide"]',
+    "=": "#equals",
+    Enter: "#equals",
+    Backspace: "#clear",
+  };
+
+  // Check if the key pressed is available
+  if (Object.keys(keys).includes(event.key)) {
+    // Search the button by key pressed
+    const btn = document.querySelectorAll(keys[event.key])[0];
+
+    // Simulate button clicl
+    btn.click();
+
+    // Add active class to visualize click
+    btn.className += " calculator__btn--active";
+
+    // Remove active class after a 150ms
+    setTimeout(() => {
+      btn.className = btn.className.replace(" calculator__btn--active", "");
+    }, 150);
+  }
+};
+
 /* The click events */
 
 // Add click event to numbers
@@ -97,3 +140,6 @@ equals.onclick = handleEqualsClick;
 
 // Add click event to clear button
 clear.onclick = handleClearClick;
+
+// Add listening event for keydonws
+document.addEventListener("keydown", handleKeyDown);

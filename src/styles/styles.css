@@ -97,8 +97,9 @@ h1 {
 }
 
 .calculator__ops:active,
-.calculator__num:active {
-  filter: brightness(150%);
+.calculator__num:active,
+.calculator__btn--active {
+  filter: brightness(180%);
 }
 
 @media (max-width: 720px) {
