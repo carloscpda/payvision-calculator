@@ -1,4 +1,4 @@
-import { operate } from "../js/operations.js";
+import { operate } from "../../js/operations.js";
 
 describe("Operate method", () => {
   it("should sum two numbers", () => {

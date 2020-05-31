@@ -1,4 +1,4 @@
-import { formatNumber } from "../js/utils.js";
+import { formatNumber } from "../../js/utils.js";
 
 describe("formatNumber method", () => {
   it("should split integers with spaces every 3 figures", () => {
